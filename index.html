@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<title>www.WORLD exprres.com</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+  <h1 class="item">WORLD</h1>
+  <h1 class="item1">express</h1>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#" class="w3-bar-item w3-button">Շալվարներ</a>
+    <a href="#" class="w3-bar-item w3-button">Կոշիկներ</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Զարդեր <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Տեսակներ</a>
+      <a href="#" class="w3-bar-item w3-button">Մատանիներ</a>
+      <a href="#" class="w3-bar-item w3-button">Վզնոցներ</a>
+      <a href="#" class="w3-bar-item w3-button">Կուլոններ</a>
+    </div>
+    <a href="#" class="w3-bar-item w3-button"></a>
+    <a href="#" class="w3-bar-item w3-button">Գլխարկներ</a>
+    <a href="#" class="w3-bar-item w3-button">Ժամացույցներ</a>
+    <a href="#" class="w3-bar-item w3-button">Վերնաշապիկներ</a>
+  </div>
+ <a href="#footer" class="w3-bar-item w3-button w3-padding">Կապ</a> 
+ <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Բաժանորդագրվել</a> 
+<!--  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a> -->
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">WORLD express</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+</header>
+<form onsubmit="submitFn(this, event);">
+    <div class="search-wrapper">
+        <div class="input-holder">
+            <input type="text" class="search-input" placeholder="Type to search" />
+            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
+        <div class="result-container">
+
+        </div>
+    </div>
+</form>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <ul5> 
+     <li5> <a href="file:///C:/Users/Admin/Desktop/zambyux/index.html#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></li5></a> 
+     <li5>Զամբյուղ</li5> 
+<!--      <li5><i onclick="open1()" class="fa fa-bars" aria-hidden="true"></i></li5>  -->
+    </ul5>  
+   <!--  <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"> 0</i> -->
+<!--       <a href="#"><i class="fa fa-search"></i><i class="material-iqons"></i> Որոնում</a> -->
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="https://www.uschamber.com/sites/default/files/023098_tjd_commentary_onlineshopping_atf.gif" alt="Jeans" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-hide-large w3-hide-medium"></h1>
+      <h1 class="w3-hide-small">Նոր տեսականի 2021</h1>
+      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p>Ցանկ</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale">
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Նոր</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Sale</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Vintage Skinny Jeans<br><b class="w3-text-red">3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Vintage Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+    </div> 
+
+    <div class="w3-row w3-grayscale">
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+          </div>
+          <div class="w3-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+              <span class="w3-tag w3-display-topleft">Նոր</span>
+              <div class="w3-display-middle w3-display-hover">
+                <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+              </div>
+            </div>
+            <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+          </div>
+          <div class="w3-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+          </div>
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+              <span class="w3-tag w3-display-topleft">Զեղջ</span>
+              <div class="w3-display-middle w3-display-hover">
+                <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+              </div>
+            </div>
+            <p>Vintage Skinny Jeans<br><b class="w3-text-red">3500֏</b></p>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <p>Vintage Skinny Jeans<br><b>3500֏</b></p>
+          </div>
+         <div class="w3-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row w3-grayscale">
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Նոր</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Զեղջ</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Vintage Skinny Jeans<br><b class="w3-text-red">3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Vintage Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row w3-grayscale">
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Նոր</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Mega Ripped Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Զեղջ</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="https://www.list.am/ru/"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Vintage Skinny Jeans<br><b class="w3-text-red">3500֏</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Vintage Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="https://i.pinimg.com/236x/2a/03/7d/2a037d0cdb48a21d171f7db78cc78988.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>3500֏</b></p>
+        </div>
+      </div>
+    </div>      
+   <!-- Subscribe section -->
+   <div class="w3-container w3-black w3-padding-32">
+     <h1>Բաժանորդագրվել</h1>
+     <p>Բաժանորդագրվեք կայքի նորություբներին առաջինը տեղեկացվելու համար:</p>
+     <p><input class="w3-input w3-border" type="text" placeholder="Էլ.հասցե" style="width:100%"></p>
+     <button type="button" class="w3-button w3-red w3-margin-bottom">Բաժանորդագրվել</button>
+   </div>
+   
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Ուղղարկել Նամակ</h4>
+        <p>Եթե ունեք հարցեր դիմեք մեզ.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Անուն" name="Անուն" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Էլ.հասցե" name="Էլ.հասցե" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Հեռախոսահամար" name="Հեռախոսահամար"required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Նամակ" name="" required></p>
+          <button type="Ուղղարկել" class="w3-button w3-block w3-black">Ուղղարկել</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>Մանրամասն</h4>
+        <p><a href="#"> Մեծ տեսականի </a></p>
+        <p><a href="#"> Քարտային վճարումներ </a></p>
+        <p><a href="#"> Միջնորդավճարներ (չկան) </a></p>
+        <p><a href="#"> Գումարի հետվերադարձ </a></p>
+        <p><a href="#"></a> Կորնտակտային տվյալներ </p>
+        <p><a href="#"> world express </a></p>
+        <p><a href="#"> +37441215550 </a></p>
+        <p><a href="#"> world express@gmail.com </a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Կապ</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> world express </p>
+        <p><i class="fa fa-fw fa-phone"></i> +37441215550</p>
+        <p><i class="fa fa-fw fa-envelope"></i> world express@gmail.com</p>
+        <h4>Վճարման համակարգեր</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> master card</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> visa Card</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> idram</p>
+        <br>
+        <h3 class="text3">Միացեք մեզ սոց ցանցերում</h3>
+        <a href="@"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></i></a>
+        <a href="https://instagram.com/___d_a_v_t_y_a_n___?utm_medium=copy_link"><i class="fa fa-instagram w3-hover-opacity w3-large"></i></a>
+        <a href="@"><i class="fa fa-snapchat w3-hover-opacity w3-large"></i></a>
+        <a href="@"><i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i></a>
+        <a href="@"><i class="fa fa-twitter w3-hover-opacity w3-large"></i></a>
+        <a href="@"><i class="fa fa-linkedin w3-hover-opacity w3-large"></i></a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">Բաժանորդագրվել</h2>
+      <p>Բաժանորդագրվեք կայքի նորություբներին առաջինը տեղեկացվելու համար.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Բաժանորդագրվել</button>
+    </div>
+  </div>
+</div>
+
+<!-- <script type="text/javascript" src="js.script.js"></script> -->
+<script>
+  console.log('barev')
+  alert('Բարև👋 բարի գալուստ (World express) խնդրում ենք միանալ մեր տեղեկատուին: Մաղթում ենք հաճելի գնումներ🛒')
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
